@@ -1,6 +1,6 @@
 local Terminal = require("toggleterm.terminal").Terminal
 
-function runPython(file)
+local function runPython(file)
   print("Running Python file...")
   local term = Terminal:new({
     cmd = "python3 " .. vim.fn.shellescape(file),
@@ -12,12 +12,11 @@ function runPython(file)
 end
 
 vim.keymap.set("n", "<leader>r", function()
-  vim.cmd("write")
-
   local file = vim.fn.expand("%:p")
   local ext = vim.fn.fnamemodify(file, ":e")
 
   if ext == "py" then
+    vim.cmd("w")
     runPython(file)
   end
 end)
