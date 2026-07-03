@@ -5,3 +5,4 @@
 vim.o.exrc = true
 vim.o.secure = false
 vim.g.autoformat = false
+vim.g.root_spec = { "cwd" }
