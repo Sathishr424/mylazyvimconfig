@@ -1,5 +1,16 @@
 local Terminal = require("toggleterm.terminal").Terminal
 
+local function runLua(file)
+  print("Running Lua file...")
+  local term = Terminal:new({
+    cmd = "lua " .. vim.fn.shellescape(file),
+    direction = "float",
+    close_on_exit = false,
+  })
+
+  term:toggle()
+end
+
 local function runPython(file)
   print("Running Python file...")
   local term = Terminal:new({
@@ -29,6 +40,9 @@ vim.keymap.set("n", "<leader>r", function()
   if ext == "py" then
     vim.cmd("w")
     runPython(file)
+  elseif ext == "lua" then
+    vim.cmd("w")
+    runLua(file)
   elseif ext == "sh" then
     vim.cmd("w")
     runShell(file)
