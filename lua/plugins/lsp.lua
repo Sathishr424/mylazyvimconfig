@@ -3,6 +3,7 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        prisma = {},
         pylsp = {
           settings = {
             pylsp = {
