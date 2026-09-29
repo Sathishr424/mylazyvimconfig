@@ -9,3 +9,7 @@ vim.keymap.set("n", "<leader><space>", function()
     file_ignore_patterns = { ".git/" }
   })
 end, { desc = "Find Files (Root Dir, including hidden)" })
+
+vim.keymap.set("n", "<leader>/", "<cmd>Telescope live_grep<cr>")
+vim.keymap.set("n", "<M-l>", "<cmd>cnext<cr>")
+vim.keymap.set("n", "<M-h>", "<cmd>cprev<cr>")
