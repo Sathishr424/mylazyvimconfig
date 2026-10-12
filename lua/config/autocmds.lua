@@ -25,7 +25,10 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.filetype.add({
-    filename = {
-        Jenkinsfile = "groovy",
-    },
+  filename = {
+    ["Jenkinsfile"] = "groovy",
+  },
+  pattern = {
+    ["Jenkinsfile.*"] = "groovy",
+  },
 })

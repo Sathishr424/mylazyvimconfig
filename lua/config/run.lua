@@ -13,8 +13,16 @@ end
 
 local function runPython(file)
   print("Running Python file...")
+
+  local cwd = vim.fn.getcwd()
+  local venv_python = cwd .. "/.venv/bin/python"
+
+  local python = vim.fn.executable(venv_python) == 1
+      and venv_python
+      or "python3"
+
   local term = Terminal:new({
-    cmd = "python3 " .. vim.fn.shellescape(file),
+    cmd = python .. " " .. vim.fn.shellescape(file),
     direction = "float",
     close_on_exit = false,
   })
