@@ -15,3 +15,5 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.spelllang = "en_us"
   end,
 })
+
+vim.g.python3_host_prog = "/mnt/games/Projects/python-env/bin/python"

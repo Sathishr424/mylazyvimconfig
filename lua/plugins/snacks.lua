@@ -10,6 +10,7 @@ return {
         files = {
           hidden = true, -- Show hidden files (dotfiles like .env)
           ignored = true, -- FALSE means respect .gitignore (hide them). Set to TRUE to show them.
+          args = { "--ignore-file", ".ignore" },
         },
         -- Configuration for the live grep search
         grep = {
@@ -62,7 +63,7 @@ return {
           win = {
             list = {
               keys = {
-                ['<leader>r'] = 'recursive_open',
+                ["<leader>r"] = "recursive_open",
               },
             },
           },

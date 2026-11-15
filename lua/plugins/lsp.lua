@@ -3,6 +3,14 @@ return {
     "neovim/nvim-lspconfig",
     opts = {
       servers = {
+        pyright = {
+          settings = {
+            python = {
+              pythonPath = "/mnt/games/Projects/python-env/bin/python",
+            },
+          },
+        },
+
         prisma = {},
         pylsp = {
           settings = {

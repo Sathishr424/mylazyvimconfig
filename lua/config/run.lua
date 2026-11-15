@@ -19,7 +19,7 @@ local function runPython(file)
 
   local python = vim.fn.executable(venv_python) == 1
       and venv_python
-      or "python3"
+      or "/mnt/games/Projects/python-env/bin/python"
 
   local term = Terminal:new({
     cmd = python .. " " .. vim.fn.shellescape(file),
