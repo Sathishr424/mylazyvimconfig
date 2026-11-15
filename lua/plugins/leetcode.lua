@@ -1,11 +1,13 @@
 return {
-    {
-        "Sathishr424/LeetcodeCompanion",
-        -- name = "leetcode",
-        -- dir = "/mnt/sat/Work/Personal/Projects/LazyvimPlugins/LeetcodeCompanion",
-        lazy = false,
-        config = function()
-            require("leetcode").setup()
-        end,
+  {
+    "kawre/leetcode.nvim",
+    cmd = "Leet",
+    dependencies = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim",
     },
+    opts = {
+      lang = "cpp", -- or python3, java, rust, ...
+    },
+  },
 }
