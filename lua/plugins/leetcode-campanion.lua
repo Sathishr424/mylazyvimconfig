@@ -5,7 +5,7 @@ return {
         -- dir = "/mnt/sat/Work/Personal/Projects/LazyvimPlugins/LeetcodeCompanion",
         lazy = false,
         config = function()
-            require("leetcode").setup()
+            require("leetcode-companion").setup()
         end,
     },
 }

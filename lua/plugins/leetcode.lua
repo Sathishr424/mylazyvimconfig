@@ -7,7 +7,7 @@ return {
       "MunifTanjim/nui.nvim",
     },
     opts = {
-      lang = "cpp", -- or python3, java, rust, ...
+      lang = "python3", -- or python3, java, rust, ...
     },
   },
 }
